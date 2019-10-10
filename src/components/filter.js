@@ -3,11 +3,13 @@ import HogsIndex from './HogsIndex.js'
 
 
 class Filter extends Component {
-    constructor() {
-        super()
-        this.state
-    }
 
+
+    handleChange = (event) => {
+        
+        this.props.onFilterChange(event.target.value)
+       
+    }
    
     
     
@@ -15,9 +17,27 @@ class Filter extends Component {
 
     render() {
         return (
-            <div>
-                <button value="submit" onClick={this.isgreased}>filter grease</button>
-            </div>
+            
+<form>
+<div>
+
+                
+
+<select name="Filter" onChange={this.handleChange}>
+                        <option value="All">All</option>
+                        <option value="Greased">Greased</option>
+                        <option value="unGreased">unGreased</option>
+                    </select>
+                </div>
+                <input type="submit" ></input>
+
+
+                </form>
+                    
+           
+
+        
+            
         )
     }
 }
