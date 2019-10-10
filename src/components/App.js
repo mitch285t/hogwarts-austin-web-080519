@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 import '../App.css';
 import Nav from './Nav'
 import hogs from '../porkers_data';
-
+import HogsIndex from './HogsIndex.js'
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          < Nav />
+  
+  state = {hogs}
 
+ 
+
+  render() {
+
+    return (
+      
+      <div className="App">
+       
+          < Nav />
+         < HogsIndex hogs={this.state.hogs} />
       </div>
     )
   }
