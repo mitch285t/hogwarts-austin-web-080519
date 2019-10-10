@@ -1,6 +1,6 @@
 import React, { Component } from 'react'  
 import HogsIndex from './HogsIndex.js'
-import { hostname } from 'os'
+
 
 class Tiles extends Component {
     constructor() {
@@ -32,10 +32,11 @@ class Tiles extends Component {
             </div>
             { this.state.hiddenValue &&
             <div className="hog details">
-                
-                <p>{this.props.hog.specialty}</p>
-                <p>{this.props.hog.weight}</p>
 
+                
+                <p>Specialty: {this.props.hog.specialty}</p>
+                <p>Weight: {this.props.hog.weight}</p>
+                <p>Title: {this.props.hog['highest medal achieved']}</p>
 
             </div>}
             </div>

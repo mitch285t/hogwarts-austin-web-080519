@@ -1,5 +1,6 @@
 import React, { Component } from 'react'  
 import Tiles from './tiles.js'
+import Filter from './filter.js'
 class HogsIndex extends Component {
     constructor(props) {
         super(props)
@@ -16,11 +17,14 @@ class HogsIndex extends Component {
     
     render() {
         return (
+           <div>
+               <Filter hogs={this.props.hogs} />
+           
             <div className="ui grid container">
                 {this.iteratehogs()}
                 
             </div>
-            
+            </div> 
         )
     }
 }
